@@ -116,5 +116,5 @@ function resultFunction() {
 	document.getElementById('result_btn').style.display = "none";
 	document.getElementById('resultByJS_div').innerHTML = "Javascript : Creating matrix...";
 	document.getElementById('resultByPlugin_div').innerHTML = "NPRuntime : Creating matrix...";
-	setTimeout("createArray()", 10);
+	setTimeout("createArray()", 5);
 }
