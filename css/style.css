@@ -1,0 +1,30 @@
+* {
+	margin: 0;
+	padding: 0;
+	background: #fff
+}
+
+html {
+	height: 100%;
+}
+
+
+body {
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	background-image: url("../images/Splash.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+img {
+	position: absolute;
+	height: 150px;
+	width: 190px;
+	float: right;
+	margin: 38% 0 0 46%;
+    background: #7F3DB6;
+}
