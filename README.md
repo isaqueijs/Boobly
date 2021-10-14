@@ -4,6 +4,3 @@
 </h1>
 <h4 align="center" >Repositório para a disciplina de Desenvolvimento de Aplicações para TV - 2020.2 - UFRPE</h4>
 <h4 align="center" >Boobly Memory Card</h4>
-
-
-<p align = "center">Agencia de desenvolvimento de software - objetivo de ajudar pequenas empresas a subir seus produtos para a web</p>
