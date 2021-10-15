@@ -3,7 +3,7 @@
     <tizen:application id="nxFJeNamAE.OfflineClockImage" package="nxFJeNamAE" required_version="2.1"/>
     <content src="index.html"/>
     <feature name="http://tizen.org/feature/screen.size.normal.1080.1920"/>
-    <icon src="icon2.png"/>
+    <icon src="icon.png"/>
     <name>Boobly</name>
     <tizen:profile name="tv-samsung"/>
     <tizen:setting screen-orientation="landscape" context-menu="enable" background-support="disable" encryption="disable" install-location="auto" hwkey-event="enable"/>

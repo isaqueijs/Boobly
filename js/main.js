@@ -17,7 +17,7 @@
 window.onload = function() {
 
 	setTimeout(function() {
-		window.location.href = "tela2.html";
+		window.location.href = "pages/menuPrincipal.html";
 	}, 5000);
 
 	// add eventListener for keydown
