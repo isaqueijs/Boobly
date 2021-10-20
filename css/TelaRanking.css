@@ -1,0 +1,149 @@
+* {
+	margin: 0;
+	padding: 0;
+	background: #fff
+}
+
+html {
+	height: 100%;
+}
+
+@font-face {
+	font-family: LuckiestGuy-Regular;
+	src: url("../fonts/LuckiestGuy-Regular.ttf");
+}
+
+body {
+	align-items: center;
+	height: 100%;
+	display: flex;
+	background-image: url("../images/fundoTelaRanking.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+
+a {
+	display: flex;
+	margin: 10px;
+	font-family: LuckiestGuy-Regular;
+	text-shadow: -10px -2px 6px #000000;
+}
+
+div {
+	display: flex;
+	flex-direction: column;
+	background: #7F3DB6;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15%;
+}
+
+.cabecalho{
+	font-family:  LuckiestGuy-Regular;
+	background-color: #7F3DB6;
+	color: #fff;
+	font-size: 150px;
+	position: absolute;	
+	margin: -400px 0px -50px 700px;
+	text-shadow: -20px -1px #000;	
+}
+
+
+div.panel{
+	opacity: 0.9;
+	background: #945AC5;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 48px;
+	height: 600px;
+	line-height: 100px;
+	color: black;
+	width: 1200px;
+	font-size: 30px;
+	font-weight: 50px;
+	border: solid #337FED 1px;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	border: yellow solid;
+	margin: 150px 0px 100px 350px ;
+	padding: 25px 25px 25px 25px;
+	
+}
+
+.firstTable{
+	font-family:  LuckiestGuy-Regular;
+	background: yellow;
+	height: 20px;
+	width: 1200px;
+	border-radius: 45px;
+	box-shadow: 1px 1px 20px 0 grey;
+	cursor: pointer;
+	text-align: center;
+	margin: 20px 3px 20px 3px;
+	padding: -200px 0px -200px 0px;
+	
+}
+
+.Column3{
+	border-radius: 45px;
+	background: #fff;	
+	margin: 25px 0px 10px 0px;
+	width: 50px;
+	
+}
+
+.Column2{
+	border-radius: 45px;
+	background: #fff;	
+	margin: 25px 0px 10px 0px;
+	width: 100px;
+	align-items: left;
+	
+}	
+	
+.Column1{
+	border-radius: 45px;
+	background: #fff;	
+	width: 25px;
+	padding-top: -50px;
+	padding-bottom: -50px;
+}	
+
+
+.playerColumn{
+	background: #FF7B52;
+	width: 125px;
+	font-family: LuckiestGuy-Regular;
+	color: #fff;
+	font-size: 30px;
+	border-radius: 45px;
+	margin-right: 20px;
+	
+}
+
+
+#voltarTextField{
+	font-family:  LuckiestGuy-Regular;
+	background-color: #FF7B52;
+	color: #fff;
+	font-size: 70px;
+	position: absolute;
+	margin: 470px 0px 0px 815px;
+	text-shadow: -15px -2px #000;	
+} 
+
+#ButtonVoltar{
+	position: absolute;
+	background-color: #FF7B52 ;
+	width: 90px;
+	height: 70px;
+	text-shadow: 10px 20px #000;
+	margin: 400px 0px 0px 857px;
+}
+
+
