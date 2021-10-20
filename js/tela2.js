@@ -13,27 +13,20 @@
  *      See the License for the specific language governing permissions and
  *      limitations under the License.
  */
-
-
 window.onload = function() {
 
 	// add eventListener for keydown
 	document.addEventListener('keydown', function(e) {
 		switch (e.keyCode) {
-		case 37:
-			alert("TETANDO IR PRA ONDE??") // LEFT arrow
+		case 37: // LEFT arrow
 			break;
-		case 38:
-			alert("TU NÃO VAI PRA CIMA!") // UP arrow
+		case 38: // UP arrow
 			break;
-		case 39:
-			alert("DIREITA????") // RIGHT arrow
+		case 39: // RIGHT arrow
 			break;
-		case 40:
-			alert("VAI PRA BAIXO???") // DOWN arrow
+		case 40: // DOWN arrow
 			break;
-		case 13:
-			alert("TEM CERTEZA???") // OK button
+		case 13: // OK button
 			break;
 		case 10009: // RETURN button
 			tizen.application.getCurrentApplication().exit();
