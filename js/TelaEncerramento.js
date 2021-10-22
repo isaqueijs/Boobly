@@ -13,12 +13,11 @@
  *      See the License for the specific language governing permissions and
  *      limitations under the License.
  */
-
 window.onload = function() {
-
+	
 	setTimeout(function() {
-		window.location.href = "pages/menuPrincipal.html";
-	}, 2500);
+		tizen.application.getCurrentApplication().exit();
+	}, 5000);
 
 	// add eventListener for keydown
 	document.addEventListener('keydown', function(e) {
