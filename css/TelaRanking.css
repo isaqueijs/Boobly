@@ -29,7 +29,6 @@ a{
 	position: absolute;
 }
 
-
 div {
 	display: flex;
 	flex-direction: column;
@@ -48,7 +47,6 @@ div {
 	margin: -400px 0px -50px 700px;
 	text-shadow: -20px -1px #000;	
 }
-
 
 div.panel{
 	opacity: 0.9;
@@ -69,8 +67,7 @@ div.panel{
 	text-align: center;
 	border: yellow solid;
 	margin: 150px 0px 100px 350px ;
-	padding: 5px 25px 25px 25px;
-	
+	padding: 5px 25px 25px 25px;	
 }
 
 /* table settings */
@@ -85,11 +82,12 @@ div.panel{
 	box-shadow: 1px 1px 20px 0 grey;
 	cursor: pointer;
 	text-align: center;
-	margin: 20px 3px 20px 3px;
+	margin: 10px 3px 10px 3px;
 	padding: -100px 0px -200px 0px;
 }
 
-.tableTitle{	
+.tableTitle{
+	border: solid 5px #945AC5;
 	font-family:  LuckiestGuy-Regular;
 	background: #945AC5;
 	height: 20px;
@@ -101,9 +99,6 @@ div.panel{
 	margin: 20px 3px 20px 3px;
 	padding: -100px 0px -200px 0px;
 }
-
-
-
 
 /*table column settings*/
 
@@ -188,5 +183,3 @@ div.panel{
 	text-shadow: 10px 20px #000;
 	margin: 370px 0px 0px 885px;
 }
-
-
