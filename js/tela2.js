@@ -13,20 +13,43 @@
  *      See the License for the specific language governing permissions and
  *      limitations under the License.
  */
+
 window.onload = function() {
+
+	document.getElementById("play").focus();
 
 	// add eventListener for keydown
 	document.addEventListener('keydown', function(e) {
 		switch (e.keyCode) {
 		case 37: // LEFT arrow
 			break;
-		case 38: // UP arrow
+		case 38:
+			if (document.activeElement === document.getElementById("exit")) {
+				document.getElementById("ranking").focus()
+			} else if (document.activeElement === document
+					.getElementById("ranking")) {
+				document.getElementById("play").focus()
+			} else if (document.activeElement === document
+					.getElementById("play")) {
+				document.getElementById("exit").focus()
+			} else {
+				document.getElementById("play").focus()
+			} // UP arrow
 			break;
 		case 39: // RIGHT arrow
 			break;
-		case 40: // DOWN arrow
+		case 40:
+			if (document.activeElement === document.getElementById("play")) {
+				document.getElementById("ranking").focus()
+			} else if (document.activeElement === document
+					.getElementById("ranking")) {
+				document.getElementById("exit").focus()
+			} else {
+				document.getElementById("play").focus()
+			}// DOWN arrow
 			break;
-		case 13: // OK button
+		case 13:
+			document.activeElement.click() // OK button
 			break;
 		case 10009: // RETURN button
 			tizen.application.getCurrentApplication().exit();

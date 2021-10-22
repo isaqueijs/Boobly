@@ -24,13 +24,11 @@ body {
 	background-size: cover;
 }
 
-
-a {
-	display: flex;
-	margin: 10px;
-	font-family: LuckiestGuy-Regular;
-	text-shadow: -10px -2px 6px #000000;
+a{
+	text-decoration: none;
+	position: absolute;
 }
+
 
 div {
 	display: flex;
@@ -60,9 +58,9 @@ div.panel{
 	border-radius: 48px;
 	height: 600px;
 	line-height: 100px;
-	color: black;
+	color: #FF4D00;
 	width: 1200px;
-	font-size: 30px;
+	font-size: 55px;
 	font-weight: 50px;
 	border: solid #337FED 1px;
 	text-decoration: none;
@@ -71,13 +69,16 @@ div.panel{
 	text-align: center;
 	border: yellow solid;
 	margin: 150px 0px 100px 350px ;
-	padding: 25px 25px 25px 25px;
+	padding: 5px 25px 25px 25px;
 	
 }
 
-.firstTable{
+/* table settings */
+
+.tableSettings{
+	
 	font-family:  LuckiestGuy-Regular;
-	background: yellow;
+	background: #fff;
 	height: 20px;
 	width: 1200px;
 	border-radius: 45px;
@@ -85,47 +86,89 @@ div.panel{
 	cursor: pointer;
 	text-align: center;
 	margin: 20px 3px 20px 3px;
-	padding: -200px 0px -200px 0px;
-	
+	padding: -100px 0px -200px 0px;
 }
 
-.Column3{
+.tableTitle{	
+	font-family:  LuckiestGuy-Regular;
+	background: #945AC5;
+	height: 20px;
+	width: 1200px;
+	border-radius: 45px;
+	box-shadow: 1px 1px 20px 0 grey;
+	cursor: pointer;
+	text-align: center;
+	margin: 20px 3px 20px 3px;
+	padding: -100px 0px -200px 0px;
+}
+
+
+
+
+/*table column settings*/
+
+.Column4{
 	border-radius: 45px;
 	background: #fff;	
 	margin: 25px 0px 10px 0px;
 	width: 50px;
-	
+	text-align: left;
+	text-shadow: -3px 1px #BC3C05;
+}
+
+.Column3{
+	text-align: center;
+	border-radius: 45px;
+	background: #fff;	
+	margin: 25px 0px 10px 0px;
+	width: 50px;
+	text-shadow: -3px 1px #BC3C05;
 }
 
 .Column2{
+	text-align:Center;
 	border-radius: 45px;
 	background: #fff;	
 	margin: 25px 0px 10px 0px;
 	width: 100px;
-	align-items: left;
+	text-shadow: -3px 1px #BC3C05;
 	
 }	
 	
 .Column1{
+	text-align:right;
 	border-radius: 45px;
 	background: #fff;	
 	width: 25px;
 	padding-top: -50px;
 	padding-bottom: -50px;
+	text-shadow: -3px 1px #BC3C05;
 }	
 
-
+/* table title settings */
 .playerColumn{
 	background: #FF7B52;
-	width: 125px;
+	width: 70px;
 	font-family: LuckiestGuy-Regular;
 	color: #fff;
-	font-size: 30px;
+	font-size: 80px;
 	border-radius: 45px;
 	margin-right: 20px;
-	
+	text-shadow: -10px 2px #000;
 }
 
+.dotsColumn{
+	background: #FF7B52;
+	width: 70px;
+	font-family: LuckiestGuy-Regular;
+	color: #fff;
+	font-size: 80px;
+	border-radius: 45px;
+	margin-left: 20px;
+	text-shadow: -10px 2px #000;
+}
+
+/*"back" button settings and name "back"*/
 
 #voltarTextField{
 	font-family:  LuckiestGuy-Regular;
@@ -133,17 +176,17 @@ div.panel{
 	color: #fff;
 	font-size: 70px;
 	position: absolute;
-	margin: 470px 0px 0px 815px;
+	margin: 480px 0px 0px 835px;
 	text-shadow: -15px -2px #000;	
 } 
 
 #ButtonVoltar{
 	position: absolute;
-	background-color: #FF7B52 ;
+	background: #FF7B52 ;
 	width: 90px;
 	height: 70px;
 	text-shadow: 10px 20px #000;
-	margin: 400px 0px 0px 857px;
+	margin: 370px 0px 0px 885px;
 }
 
 

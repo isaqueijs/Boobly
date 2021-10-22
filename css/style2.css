@@ -69,7 +69,8 @@ div {
 	border: black solid;
 }
 
-.BUTTON_OPP:hover {
+.BUTTON_OPP:focus {
+	outline: none;
 	border: solid #337FED 1px;
 	background: #1E62D0;
 	background-image: -webkit-linear-gradient(top, #1E62D0, #3D94F6);
