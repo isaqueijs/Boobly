@@ -18,6 +18,6 @@ window.onload = function() {
 	
 	setTimeout(function() {
 		tizen.application.getCurrentApplication().exit();
-	}, 5000);
+	}, 2500);
 
 }
