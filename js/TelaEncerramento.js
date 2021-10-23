@@ -16,7 +16,7 @@
 window.onload = function() {
 	
 	setTimeout(function() {
-		tizen.application.getCurrentApplication().hide();
+		tizen.application.getCurrentApplication().hide()
 	}, 2500);
 
 	// add eventListener for keydown

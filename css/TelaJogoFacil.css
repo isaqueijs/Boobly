@@ -4,6 +4,10 @@
 	background: #fff
 }
 
+p{
+	background:#05c3ff;
+}
+
 html {
 	height: 100%;
 }
@@ -13,7 +17,17 @@ html {
 	src: url("../fonts/LuckiestGuy-Regular.ttf");
 }
 
+img{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items:  center;
+	border-radius: 20px;
+}
+
 body {
+	font-family: LuckiestGuy-Regular;
 	align-items: center;
 	height: 100%;
 	display: flex;
@@ -42,7 +56,7 @@ div {
 
 .cabecalho{
 	font-family:  LuckiestGuy-Regular;
-	background-color: #FFD76F;
+	background-color: #FFC75C;
 	color: #fff;
 	font-size: 80px;
 	position: absolute;	
@@ -58,7 +72,7 @@ div.panel{
 	border-radius: 48px;
 	height: 600px;
 	line-height: 100px;
-	color: #FF4D00;
+	color: #FFD76F;
 	width: 1200px;
 	font-size: 55px;
 	font-weight: 50px;
@@ -71,3 +85,53 @@ div.panel{
 	margin: 100px 0px 100px 350px ;
 	padding: 5px 25px 25px 25px;	
 }
+
+/* card style */
+
+.card{
+	width: 201px;
+	height: 430px;
+	background: #FFC75C;
+	
+	
+}
+
+
+.card_back, .card_front{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items:  center;
+	border-radius: 20px;
+	box-shadow: 10px 10px 10px  rgba(0, 0, 0.45);
+	
+}
+*/
+.card_front{
+	background-color: #101c2c;
+	
+}
+
+.card_back{
+	color: #101c2c;
+	background-color: #05c3ff;
+	font-size: 30px;
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
