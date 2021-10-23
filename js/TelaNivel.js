@@ -52,7 +52,7 @@ window.onload = function() {
 			document.activeElement.click() // OK button
 			break;
 		case 10009: // RETURN button
-			tizen.application.getCurrentApplication().exit();
+			window.location.href = "menuPrincipal.html";
 			break;
 		default:
 			console.log('Key code : ' + e.keyCode);
