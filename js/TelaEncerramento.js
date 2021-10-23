@@ -16,6 +16,7 @@
 window.onload = function() {
 	
 	setTimeout(function() {
+		
 		tizen.application.getCurrentApplication().hide()
 	}, 2500);
 
