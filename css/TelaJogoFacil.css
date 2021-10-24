@@ -58,7 +58,7 @@ div {
 	font-family:  LuckiestGuy-Regular;
 	background-color: #FFC75C;
 	color: #fff;
-	font-size: 80px;
+	font-size: 150px;
 	position: absolute;	
 	margin: -400px 0px -50px 700px;
 	text-shadow: -20px -1px #000;	
@@ -94,9 +94,7 @@ div.panel{
 	background: #FFC75C;
 	position:relative;
 	transform-style: preserve-3d;
-	transition: transform .9s;
-	
-	
+	transition: transform .5s; /*trasition effect*/
 }
 
 
@@ -113,6 +111,7 @@ div.panel{
 	
 }
 
+/*transition effect*/
 .flip{
 	transform: rotateY(180deg);
 }
@@ -128,8 +127,7 @@ div.panel{
 	background-color: #05c3ff;
 	font-size: 30px;
 	/*display: none;*/
-	
-	
+
 }
 
 
