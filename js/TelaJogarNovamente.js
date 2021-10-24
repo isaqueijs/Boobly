@@ -12,7 +12,7 @@
  *      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *      See the License for the specific language governing permissions and
  *      limitations under the License.
-
+ */
 
 window.onload = function() {
 
@@ -52,7 +52,7 @@ window.onload = function() {
 			document.activeElement.click() // OK button
 			break;
 		case 10009: // RETURN button
-			tizen.application.getCurrentApplication().exit();
+			window.location.href = "menuPrincipal.html";
 			break;
 		default:
 			console.log('Key code : ' + e.keyCode);
@@ -60,4 +60,3 @@ window.onload = function() {
 		}
 	});
 }
- */
