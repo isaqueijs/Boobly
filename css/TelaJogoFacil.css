@@ -28,6 +28,7 @@ img{
 
 body {
 	font-family: LuckiestGuy-Regular;
+	justify-content: center;
 	align-items: center;
 	height: 100%;
 	display: flex;
@@ -47,43 +48,39 @@ a {
 
 div {
 	display: flex;
-	flex-direction: column;
-	background: #7F3DB6;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 15%;
+	
 }
 
 .cabecalho{
 	font-family:  LuckiestGuy-Regular;
 	background-color: #FFC75C;
 	color: #fff;
-	font-size: 150px;
+	font-size: 90px;
 	position: absolute;	
-	margin: -400px 0px -50px 700px;
-	text-shadow: -20px -1px #000;	
+	margin: -420px 0px -50px 0px;
+	text-shadow: -9px -2px #000;
+	letter-spacing: 0.2em;	
 }
 
 div.panel{
-	opacity: 0.9;
+	display: grid;
+	grid-template: 1fr 1fr /1fr 1fr 1fr;
+    gap: 10px;
 	background: #FFD76F;
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 48px;
-	height: 600px;
 	line-height: 100px;
 	color: #FFD76F;
-	width: 1200px;
 	font-size: 55px;
 	font-weight: 50px;
 	border: solid #337FED 1px;
 	text-decoration: none;
-	display: inline-block;
 	cursor: pointer;
 	text-align: center;
 	border: yellow solid;
-	margin: 100px 0px 100px 350px ;
-	padding: 5px 25px 25px 25px;	
+	margin: 200px 0px 60px 20px;
+	padding: 5px 25px 112px 25px;	
 }
 
 /* card style */
@@ -91,10 +88,11 @@ div.panel{
 .card{
 	width: 200px;
 	height: 200px;
-	background: #FFC75C;
+	background: none;
 	position:relative;
 	transform-style: preserve-3d;
 	transition: transform .5s; /*trasition effect*/
+	margin: 80px 100px 60px 100px;
 }
 
 
@@ -132,15 +130,11 @@ div.panel{
 
 
 
+/**** css do timer ****/
 
-
-
-
-
-
-
-
-
+#timer{
+	background: #FFC75C;
+}
 
 
 
