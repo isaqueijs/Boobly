@@ -1,19 +1,6 @@
-/*
- *      Copyright 2013  Samsung Electronics Co., Ltd
- *
- *      Licensed under the Flora License, Version 1.1 (the "License");
- *      you may not use this file except in compliance with the License.
- *      You may obtain a copy of the License at
- *
- *              http://floralicense.org/license/
- *
- *      Unless required by applicable law or agreed to in writing, software
- *      distributed under the License is distributed on an "AS IS" BASIS,
- *      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *      See the License for the specific language governing permissions and
- *      limitations under the License.
 
 
+/* CONTROL SETTINGS*/
 window.onload = function() {
 
 	document.getElementById("1").focus();
@@ -60,4 +47,136 @@ window.onload = function() {
 		}
 	});
 }
- */
+ 
+
+
+/* GAME TIMER */
+
+function startTimer(duration, display){
+	var timer = duration, minutes, seconds;
+	
+	setInterval(function () {
+		
+		minutes = parseInt(timer / 60, 10);
+		seconds = parseInt(timer % 60, 10);
+		
+		minutes = minutes < 10 ? "0" + minutes: minutes;
+		seconds = seconds < 10 ? "0" + seconds: seconds;
+		
+		display.textContent = minutes + ":" + seconds;
+		
+		if(--timer < 0){
+			timer = duration;
+		}
+		
+	}, 1000);
+}
+
+
+window.onload = function(){
+	var duration = 60 * 4; //conversao para segundos
+	var display = document.querySelector("#timer"); //Elemento para exibir o timer
+	
+	startTimer(duration, display); //inicia a função
+}
+
+
+/**************************************************************/
+
+
+/* RANDOM CARD TEMPLATES */
+
+
+const FRONT = "card_front";
+const BACK = "card_back"
+	
+	
+var techs =  ['coruja',
+              'dog',
+              'elefante',
+              'foca',
+              'gato',
+              'grilo',
+              'jacare',
+              'macaco',
+              'panda',
+              'tigre',
+              'veado',
+              'polvo',
+              'urso',
+              'joaninha',
+              'siri',
+              'sapo',
+              'galinha'];
+
+var cards = null;
+
+startGame();
+
+function startGame(){
+	cards = createCardsFromTechs(techs);
+	shuffleCards(cards);
+	console.log(cards);
+	
+}
+
+
+function shuffleCards(cards) {
+	let currentIndex = cards.lenght;
+	let randomIndex = 0;
+	
+	while(currentIndex !== 0){
+		randomIndex = Math.floor(Math.random() * currentIndex);
+		currentIndex--;
+		
+		[cards[randomIndex], cards[currentIndex]] = [ cards[currentIndex], cards[randomIndex]];
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+function createCardsFromTechs(techs){
+	let cards = [];
+	
+	for(var techs of techs){
+		cards.push(createPairFromTech(tech));
+	}
+	
+	return cards.flatMap(pair => pair);
+}
+
+function createPairFromTech(tech) {
+	return [{
+		id: createIdWithTech(tech),
+		icon: tech,
+		flipped: false,
+	}, {
+		id: createIdWithTech(tech),
+		icon: tech,
+		flipped: false,
+	}]
+}
+
+
+
+function createIdWithTech(tech) {
+	return tech + parseInt( Math.random() * 1000);
+}
+
+
+
+
+
+
+
+
+
