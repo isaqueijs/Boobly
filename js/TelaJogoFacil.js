@@ -65,16 +65,22 @@ function startTimer(duration, display){
 		
 		display.textContent = minutes + ":" + seconds;
 		
+		
+		if(timer == 0){
+			window.location.replace("../pages/TelaJogarNovamente.html");
+		}
+		
 		if(--timer < 0){
 			timer = duration;
 		}
+		
 		
 	}, 1000);
 }
 
 
 window.onload = function(){
-	var duration = 60 * 4; //conversao para segundos
+	var duration = 60 * 1; //conversao para segundos
 	var display = document.querySelector("#timer"); //Elemento para exibir o timer
 	
 	startTimer(duration, display); //inicia a função
