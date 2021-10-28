@@ -16,7 +16,7 @@
 
 window.onload = function() {
 
-	document.getElementById("1").focus();
+	document.getElementById("button").focus();
 
 	// add eventListener for keydown
 	document.addEventListener('keydown', function(e) {
@@ -49,10 +49,10 @@ window.onload = function() {
 			}// DOWN arrow
 			break;
 		case 13:
-			document.activeElement.click() // OK button
+			window.location.href = "TelaNivel.html"; // OK button
 			break;
 		case 10009: // RETURN button
-			window.location.href = "TelaInputNome.html";
+			window.location.href = "TelaMenuPrincipal.html";
 			break;
 		default:
 			console.log('Key code : ' + e.keyCode);
