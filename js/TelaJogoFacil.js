@@ -1,6 +1,8 @@
 
 
-/* CONTROL SETTINGS*/
+/**************************************************************/
+
+/* CONTROL SETTINGS
 window.onload = function() {
 
 	document.getElementById("1").focus();
@@ -47,7 +49,10 @@ window.onload = function() {
 		}
 	});
 }
- 
+
+*/
+
+
 
 
 /* GAME TIMER */
@@ -87,17 +92,17 @@ window.onload = function(){
 }
 
 
-/**************************************************************/
+
+/***************** RANDOM CARD TEMPLATES *************************/
 
 
-/* RANDOM CARD TEMPLATES */
-
-
-const FRONT = "card_front";
+const FRONT = "card_front"
 const BACK = "card_back"
+const CARD = "card"
+const ICON = "icon"
 	
 	
-var techs =  ['coruja',
+let techs =  ['coruja',
               'dog',
               'elefante',
               'foca',
@@ -115,50 +120,88 @@ var techs =  ['coruja',
               'sapo',
               'galinha'];
 
-var cards = null;
+let cards = null; //global 
+startGame(); //iniciando
 
-startGame();
 
 function startGame(){
-	cards = createCardsFromTechs(techs);
-	shuffleCards(cards);
-	console.log(cards);
+	cards = createCardsFromTechs(techs); //criando os cards
+	shuffleCards(cards); //embaralha cards
+	initializeCards(cards);
+}
+
+function initializeCards(cards){
+	let gameBoard = document.getElementById("gameBoard");
+	
+	/*criando cartas*/
+	cards.forEach(card => {
+		let cardElement = document.createElement('div');
+		cardElement.id = card.id; /*add id para os cards*/
+		cardElement.classList.add(CARD);
+		cardElement.dataset.icon = card.icon;/*VERIFICAR SE CARDS SAO IGUAIS*/	
+		createCardContent(card, cardElement);
+		
+		cardElement.addEventListener('click', flipCard); /*chamando função flipCard evento do click*/
+		gameBoard.appendChild(cardElement);	/*colocando no tabuleiro*/
+		
+	})
+}
+
+
+function createCardContent(card, cardElement){	
+	createCardFace(FRONT, card, cardElement);
+	createCardFace(BACK, card, cardElement);	
+}
+
+
+
+function createCardFace(face, card, element){
+	
+	let cardElementFace = document.createElement('div');
+	cardElementFace.classList.add(face);
+	
+	if(face === FRONT){
+		let iconElement =  document.createElement('img');
+		iconElement.classList.add(ICON);
+		iconElement.src = "../images/cards"+ card.icon + ".png";
+		cardElementFace.appendChild(iconElement);
+		
+	}else{
+		cardElementFace.innerHtml = "&lt/&gt";
+	}
+	
+	element.appendChild(cardElementFace);
 	
 }
 
 
 function shuffleCards(cards) {
-	let currentIndex = cards.lenght;
-	let randomIndex = 0;
+	let currentIndex = cards.lenght; //index atual do card
+	let randomIndex = 0; //index 0
 	
 	while(currentIndex !== 0){
-		randomIndex = Math.floor(Math.random() * currentIndex);
-		currentIndex--;
 		
-		[cards[randomIndex], cards[currentIndex]] = [ cards[currentIndex], cards[randomIndex]];
+		randomIndex = Math.floor(Math.random() * currentIndex); //so pode pegar cartas que nao foi embaralhada de 1 até fim 
+		currentIndex--; // diminue os cards
+		
+		[cards[randomIndex], cards[currentIndex]] = [ cards[currentIndex], cards[randomIndex]]
 	}
 }
 
 
 
-
-
-
-
-
-
-
-
-
-function createCardsFromTechs(techs){
+ function createCardsFromTechs(techs){
 	let cards = [];
 	
-	for(var techs of techs){
+	techs.forEach((tech) => {
 		cards.push(createPairFromTech(tech));
-	}
+	})
 	
 	return cards.flatMap(pair => pair);
+	
 }
+
+
 
 function createPairFromTech(tech) {
 	return [{
@@ -173,14 +216,17 @@ function createPairFromTech(tech) {
 }
 
 
-
+//criando o ID dos cards
 function createIdWithTech(tech) {
-	return tech + parseInt( Math.random() * 1000);
+	return tech + parseInt( Math.random() * 1000); //Math... numero randomico
 }
 
 
 
-
+function flipCard() {
+	this.classList.add("flip");
+	
+}
 
 
 
