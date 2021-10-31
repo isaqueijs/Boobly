@@ -15,7 +15,7 @@ function startTimer(duration, display){
 		
 		
 		if(timer == 0){
-			window.location.replace("../pages/TelaJogarNovamente.html");
+			window.location.replace("../pages/TelaPerdeu.html");
 		}
 		
 		if(--timer < 0){
@@ -164,14 +164,10 @@ function createIdWithTech(tech) {
 	return tech + parseInt( Math.random() * 1000); //Math... numero randomico
 }
 
-
-
 function flipCard() {
 	this.classList.add("flip");
 	
 }
-
-
 
 */
 
