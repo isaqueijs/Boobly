@@ -15,7 +15,7 @@ function startTimer(duration, display){
 		
 		
 		if(timer == 0){
-			window.location.replace("../pages/TelaJogarPerdeu.html");
+			window.location.replace("../pages/TelaPerdeu.html");
 		}
 		
 		if(--timer < 0){
