@@ -15,7 +15,7 @@ function startTimer(duration, display){
 		
 		
 		if(timer == 0){
-			window.location.replace("../pages/TelaPerdeu.html");
+			window.location.replace("../pages/TelaJogarNovamente.html");
 		}
 		
 		if(--timer < 0){
@@ -28,15 +28,16 @@ function startTimer(duration, display){
 
 
 window.onload = function(){
-
 	var duration = 60 * 4; //conversao para segundos
-
 	var display = document.querySelector("#timer"); //Elemento para exibir o timer
 	
 	startTimer(duration, display); //inicia a função
 }
 
-/* 
+
+
+/*
+
 
 const FRONT = "card_front"
 const BACK = "card_back"
@@ -95,6 +96,8 @@ function createCardContent(card, cardElement){
 	createCardFace(BACK, card, cardElement);	
 }
 
+
+
 function createCardFace(face, card, element){
 	
 	let cardElementFace = document.createElement('div');
@@ -114,6 +117,7 @@ function createCardFace(face, card, element){
 	
 }
 
+
 function shuffleCards(cards) {
 	let currentIndex = cards.lenght; //index atual do card
 	let randomIndex = 0; //index 0
@@ -127,6 +131,8 @@ function shuffleCards(cards) {
 	}
 }
 
+
+
  function createCardsFromTechs(techs){
 	let cards = [];
 	
@@ -137,6 +143,8 @@ function shuffleCards(cards) {
 	return cards.flatMap(pair => pair);
 	
 }
+
+
 
 function createPairFromTech(tech) {
 	return [{
@@ -150,15 +158,20 @@ function createPairFromTech(tech) {
 	}]
 }
 
+
 //criando o ID dos cards
 function createIdWithTech(tech) {
 	return tech + parseInt( Math.random() * 1000); //Math... numero randomico
 }
 
+
+
 function flipCard() {
 	this.classList.add("flip");
 	
 }
+
+
 
 */
 
