@@ -15,7 +15,7 @@ function startTimer(duration, display){
 		
 		
 		if(timer == 0){
-			window.location.replace("../pages/TelaJogarNovamente.html");
+			window.location.replace("../pages/TelaJogarPerdeu.html");
 		}
 		
 		if(--timer < 0){
@@ -28,7 +28,7 @@ function startTimer(duration, display){
 
 
 window.onload = function(){
-	var duration = 60 * 4; //conversao para segundos
+	var duration = 60 * 0.10; //conversao para segundos
 	var display = document.querySelector("#timer"); //Elemento para exibir o timer
 	
 	startTimer(duration, display); //inicia a função
