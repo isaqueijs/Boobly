@@ -29,7 +29,7 @@ function startTimer(duration, display){
 
 window.onload = function(){
 
-	var duration = 60 * 4; //conversao para segundos
+	var duration = 60 * 0.10; //conversao para segundos
 
 	var display = document.querySelector("#timer"); //Elemento para exibir o timer
 	
