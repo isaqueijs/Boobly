@@ -36,10 +36,7 @@ window.onload = function(){
 	startTimer(duration, display); //inicia a função
 }
 
-
-
 /* 
-
 
 const FRONT = "card_front"
 const BACK = "card_back"
