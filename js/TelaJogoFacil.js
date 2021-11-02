@@ -15,7 +15,7 @@ function startTimer(duration, display){
 		
 		
 		if(timer == 0){
-			window.location.replace("../pages/TelaPerdeu.html");
+			window.location.hef = "TelaPerdeu.html";
 		}
 		
 		if(--timer < 0){
@@ -26,22 +26,24 @@ function startTimer(duration, display){
 	}, 1000);
 }
 
+var count = 0;
+var par = [];
 
 window.onload = function(){
 
 	var duration = 60 * 0.10; //conversao para segundos
 
 	var display = document.querySelector("#timer"); //Elemento para exibir o timer
-	
+
 	startTimer(duration, display); //inicia a função
-	
-	
+
+
 	for (var int = 1; int <= 6; int++) {
 		document.getElementById(int).addEventListener('click', flipCard);
 	}
-	
+
 	document.getElementById("1").focus();
-	
+
 	var id = 1;
 
 	// add eventListener for keydown
@@ -97,17 +99,38 @@ window.onload = function(){
 			// DOWN arrow
 			break;
 		case 13:
-			document.activeElement.click(); // OK button
+			if (isFaceUp(id)) {				
+				// OK button
+				break;
+			} else {
+				document.activeElement.click();
+			}
+
+			if (par.length === 2) {
+				par = [];
+			}
+
+			if (par[length] !== id) {
+				par.push(id);
+
+				console.log("Ultimo elemento no vetor: "+ par[length]);
+				console.log("tamanho do vetor: " + par.length)
+				if (par.length === 2) {
+					acertouPar();
+					venceu();
+				}
+			}
+
 			break;
 		case 10009: // RETURN button
-			
+
 			break;
 		default:
 			console.log('Key code : ' + e.keyCode);
-			break;
+		break;
 		}
 	});
-	
+
 }
 
 /* 
@@ -237,4 +260,33 @@ function flipCard() {
 }
 
 
+function isFaceUp(id) {
+	return document.getElementById(id).classList.contains("flip");
+}
+
+function acertouPar() {
+	
+	var obj1 = document.getElementById(par[0]).childNodes.item(1).childNodes.item(1).attributes.item(1).nodeValue;
+	var obj2 = document.getElementById(par[1]).childNodes.item(1).childNodes.item(1).attributes.item(1).nodeValue;
+	
+	
+	if (obj1 !== obj2) {
+		
+		setTimeout(function() {
+			document.getElementById(par[0]).classList.remove("flip");
+			document.getElementById(par[1]).classList.remove("flip");
+		}, 1000);	
+		
+	} else {
+		console.log("Acertou o par!");
+	}
+}
+
+function venceu() {
+	
+	count = document.querySelectorAll(".flip");
+	if (count.length === 6) {
+		window.location.href = "TelaVenceu.html";
+	}
+}
 
