@@ -52,7 +52,7 @@ window.onload = function() {
 			document.activeElement.click() // OK button
 			break;
 		case 10009: // RETURN button
-			window.location.href = "menuPrincipal.html";
+			window.location.href = "TelaMenuPrincipal.html";
 			break;
 		default:
 			console.log('Key code : ' + e.keyCode);
