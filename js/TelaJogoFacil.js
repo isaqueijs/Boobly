@@ -34,6 +34,80 @@ window.onload = function(){
 	var display = document.querySelector("#timer"); //Elemento para exibir o timer
 	
 	startTimer(duration, display); //inicia a função
+	
+	
+	for (var int = 1; int <= 6; int++) {
+		document.getElementById(int).addEventListener('click', flipCard);
+	}
+	
+	document.getElementById("1").focus();
+	
+	var id = 1;
+
+	// add eventListener for keydown
+	document.addEventListener('keydown', function(e) {
+		switch (e.keyCode) {
+		case 37: // LEFT arrow
+			if (id === 1) {
+				id = 3;
+				document.getElementById(id).focus();
+			} else if (id < 4) {
+				id = id - 1;
+				document.getElementById(id).focus();
+			} else if (id > 4 ) {
+				id = id - 1;
+				document.getElementById(id).focus();
+			} else if (id === 4) {
+				id = 6;
+				document.getElementById(id).focus();
+			}
+			break;
+		case 38:
+			if (id < 4) {
+				id = id + 3;
+				document.getElementById(id).focus();
+			} else if (id > 3) {
+				id = id - 3;
+				document.getElementById(id).focus();
+			} 
+			break;
+		case 39: // RIGHT arrow
+			if (id === 3) {
+				id = 1;
+				document.getElementById(id).focus();
+			} else if (id < 3) {
+				id = id + 1;
+				document.getElementById(id).focus();
+			} else if (id > 3 && id < 6) {
+				id = id + 1;
+				document.getElementById(id).focus();
+			} else if (id === 6) {
+				id = 4;
+				document.getElementById(id).focus();
+			}
+			break;
+		case 40:
+			if (id < 4) {
+				id = id + 3;
+				document.getElementById(id).focus();
+			} else if (id > 3) {
+				id = id - 3;
+				document.getElementById(id).focus();
+			} 
+			// DOWN arrow
+			break;
+		case 13:
+			document.activeElement.click(); // OK button
+			break;
+		case 10009: // RETURN button
+			
+			break;
+		default:
+			console.log('Key code : ' + e.keyCode);
+			break;
+		}
+	});
+	
 }
 
 /* 
@@ -155,10 +229,12 @@ function createIdWithTech(tech) {
 	return tech + parseInt( Math.random() * 1000); //Math... numero randomico
 }
 
+*/
+
 function flipCard() {
 	this.classList.add("flip");
 	
 }
 
-*/
+
 
