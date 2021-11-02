@@ -15,7 +15,7 @@ function startTimer(duration, display){
 		
 		
 		if(timer == 0){
-			window.location.hef = "TelaPerdeu.html";
+			window.location.href = "TelaPerdeu.html";
 		}
 		
 		if(--timer < 0){
