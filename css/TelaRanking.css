@@ -112,7 +112,7 @@ div.panel{
 }
 
 .Column3{
-	text-align: center;
+	text-align:right;
 	border-radius: 45px;
 	background: #fff;	
 	margin: 25px 0px 10px 0px;
@@ -121,7 +121,7 @@ div.panel{
 }
 
 .Column2{
-	text-align:Center;
+	text-align:right;
 	border-radius: 45px;
 	background: #fff;	
 	margin: 25px 0px 10px 0px;
