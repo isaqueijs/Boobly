@@ -95,6 +95,11 @@ div.panel{
 	margin: 80px 20px -20px 100px;
 }
 
+.card:focus {
+	outline: none;
+	box-shadow: 10px 10px 50px  rgba(245, 45, 45);
+	border-radius: 20px;
+}
 
 .card_back, .card_front{
 	width: 100%;
