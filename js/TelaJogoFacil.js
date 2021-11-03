@@ -2,27 +2,27 @@
 
 function startTimer(duration, display){
 	var timer = duration, minutes, seconds;
-	
+
 	setInterval(function () {
-		
+
 		minutes = parseInt(timer / 60, 10);
 		seconds = parseInt(timer % 60, 10);
-		
+
 		minutes = minutes < 10 ? "0" + minutes: minutes;
 		seconds = seconds < 10 ? "0" + seconds: seconds;
-		
+
 		display.textContent = minutes + ":" + seconds;
-		
-		
+
+
 		if(timer == 0){
 			window.location.href = "TelaPerdeu.html";
 		}
-		
+
 		if(--timer < 0){
 			timer = duration;
 		}
-		
-		
+
+
 	}, 1000);
 }
 
@@ -140,8 +140,8 @@ const FRONT = "card_front"
 const BACK = "card_back"
 const CARD = "card"
 const ICON = "icon"
-	
-	
+
+
 let techs =  ['coruja',
               'dog',
               'elefante',
@@ -172,7 +172,7 @@ function startGame(){
 
 function initializeCards(cards){
 	let gameBoard = document.getElementById("gameBoard");
-	
+
 	//criando cartas
 	cards.forEach(card => {
 		let cardElement = document.createElement('div');
@@ -180,10 +180,10 @@ function initializeCards(cards){
 		cardElement.classList.add(CARD);
 		cardElement.dataset.icon = card.icon; //VERIFICAR SE CARDS SAO IGUAIS
 		createCardContent(card, cardElement);
-		
+
 		cardElement.addEventListener('click', flipCard); // chamando função flipCard evento do click
 		gameBoard.appendChild(cardElement);	// colocando no tabuleiro
-		
+
 	})
 }
 
@@ -194,46 +194,46 @@ function createCardContent(card, cardElement){
 }
 
 function createCardFace(face, card, element){
-	
+
 	let cardElementFace = document.createElement('div');
 	cardElementFace.classList.add(face);
-	
+
 	if(face === FRONT){
 		let iconElement =  document.createElement('img');
 		iconElement.classList.add(ICON);
 		iconElement.src = "../images/cards"+ card.icon + ".png";
 		cardElementFace.appendChild(iconElement);
-		
+
 	}else{
 		cardElementFace.innerHtml = "&lt/&gt";
 	}
-	
+
 	element.appendChild(cardElementFace);
-	
+
 }
 
 function shuffleCards(cards) {
 	let currentIndex = cards.lenght; //index atual do card
 	let randomIndex = 0; //index 0
-	
+
 	while(currentIndex !== 0){
-		
+
 		randomIndex = Math.floor(Math.random() * currentIndex); //so pode pegar cartas que nao foi embaralhada de 1 até fim 
 		currentIndex--; // diminue os cards
-		
+
 		[cards[randomIndex], cards[currentIndex]] = [ cards[currentIndex], cards[randomIndex]]
 	}
 }
 
  function createCardsFromTechs(techs){
 	let cards = [];
-	
+
 	techs.forEach((tech) => {
 		cards.push(createPairFromTech(tech));
 	})
-	
+
 	return cards.flatMap(pair => pair);
-	
+
 }
 
 function createPairFromTech(tech) {
@@ -253,11 +253,11 @@ function createIdWithTech(tech) {
 	return tech + parseInt( Math.random() * 1000); //Math... numero randomico
 }
 
-*/
+ */
 
 function flipCard() {
 	this.classList.add("flip");
-	
+
 }
 
 
@@ -266,22 +266,21 @@ function isFaceUp(id) {
 }
 
 function acertouPar() {
-	
+
 	var obj1 = document.getElementById(par[0]).childNodes.item(1).childNodes.item(1).attributes.item(1).nodeValue;
 	var obj2 = document.getElementById(par[1]).childNodes.item(1).childNodes.item(1).attributes.item(1).nodeValue;
 	var erroCard = document.getElementById("erroCard");
 	var acertoCard = document.getElementById("acertoCard");
-	
-	
+
 	if (obj1 !== obj2) {
-				
+
 		setTimeout(function() {
 			document.getElementById(par[0]).classList.remove("flip");
 			document.getElementById(par[1]).classList.remove("flip");
 			erroCard.play();
-						
+
 		}, 1000);	
-		
+
 	} else {
 		console.log("Acertou o par!");
 		acertoCard.play();
@@ -289,13 +288,13 @@ function acertouPar() {
 }
 
 function venceu() {
-	
+
 	count = document.querySelectorAll(".flip");
 	setTimeout(function() {
 		if (count.length === 6) {
-		window.location.href = "TelaVenceu.html";
-	}
-		
+			window.location.href = "TelaVenceu.html";
+		}
+
 	}, 1000);
 }
 

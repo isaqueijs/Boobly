@@ -17,7 +17,7 @@
 window.onload = function() {
 
 	var somBotao = document.getElementById("somBotao");
-	
+
 	document.getElementById("play").focus();
 
 	// add eventListener for keydown
@@ -60,7 +60,7 @@ window.onload = function() {
 			break;
 		default:
 			console.log('Key code : ' + e.keyCode);
-			break;
+		break;
 		}
 	});
 }
