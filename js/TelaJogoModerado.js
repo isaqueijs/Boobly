@@ -303,7 +303,9 @@ function acertouPar() {
 function venceu() {
 	
 	count = document.querySelectorAll(".flip");
-	if (count.length === 12) {
-		window.location.href = "TelaVenceu.html";
-	}
+	setTimeout(function() {
+		if (count.length === 12) {
+			window.location.href = "TelaVenceu.html";
+		}
+	}, 1500)
 }
