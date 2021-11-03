@@ -283,17 +283,20 @@ function acertouPar() {
 	
 	var obj1 = document.getElementById(par[0]).childNodes.item(1).childNodes.item(1).attributes.item(1).nodeValue;
 	var obj2 = document.getElementById(par[1]).childNodes.item(1).childNodes.item(1).attributes.item(1).nodeValue;
-	
+	var erroCard = document.getElementById("erroCard");
+	var acertoCard = document.getElementById("acertoCard");
 	
 	if (obj1 !== obj2) {
 		
 		setTimeout(function() {
 			document.getElementById(par[0]).classList.remove("flip");
 			document.getElementById(par[1]).classList.remove("flip");
+			erroCard.play();
 		}, 1000);	
 		
 	} else {
 		console.log("Acertou o par!");
+		acertoCard.play();
 	}
 }
 
