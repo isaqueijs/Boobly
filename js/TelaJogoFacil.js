@@ -295,6 +295,6 @@ function venceu() {
 			window.location.href = "TelaVenceu.html";
 		}
 
-	}, 1000);
+	}, 1500);
 }
 

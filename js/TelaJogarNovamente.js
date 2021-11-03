@@ -15,6 +15,8 @@
  */
 
 window.onload = function() {
+	
+	var somBotao = document.getElementById("somBotao");
 
 	document.getElementById("1").focus();
 
@@ -24,14 +26,13 @@ window.onload = function() {
 		case 37: // LEFT arrow
 			break;
 		case 38:
-			if (document.activeElement === document.getElementById("3")) {
-				document.getElementById("2").focus()
-			} else if (document.activeElement === document
+			somBotao.play();
+			if (document.activeElement === document
 					.getElementById("2")) {
 				document.getElementById("1").focus()
 			} else if (document.activeElement === document
 					.getElementById("1")) {
-				document.getElementById("3").focus()
+				document.getElementById("2").focus()
 			} else {
 				document.getElementById("1").focus()
 			} // UP arrow
@@ -39,14 +40,13 @@ window.onload = function() {
 		case 39: // RIGHT arrow
 			break;
 		case 40:
+			somBotao.play();
 			if (document.activeElement === document.getElementById("1")) {
 				document.getElementById("2").focus()
 			} else if (document.activeElement === document
 					.getElementById("2")) {
-				document.getElementById("3").focus()
-			} else {
 				document.getElementById("1").focus()
-			}// DOWN arrow
+			} // DOWN arrow
 			break;
 		case 13:
 			document.activeElement.click() // OK button

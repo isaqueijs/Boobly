@@ -15,7 +15,8 @@
  */
 
 window.onload = function() {
-
+	var somBotao = document.getElementById("somBotao");
+	
 	document.getElementById("1").focus();
 
 	// add eventListener for keydown
@@ -24,6 +25,7 @@ window.onload = function() {
 		case 37: // LEFT arrow
 			break;
 		case 38:
+			somBotao.play();
 			if (document.activeElement === document.getElementById("3")) {
 				document.getElementById("2").focus()
 			} else if (document.activeElement === document
@@ -39,6 +41,7 @@ window.onload = function() {
 		case 39: // RIGHT arrow
 			break;
 		case 40:
+			somBotao.play();
 			if (document.activeElement === document.getElementById("1")) {
 				document.getElementById("2").focus()
 			} else if (document.activeElement === document
