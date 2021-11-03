@@ -270,7 +270,6 @@ function acertouPar() {
 	var obj1 = document.getElementById(par[0]).childNodes.item(1).childNodes.item(1).attributes.item(1).nodeValue;
 	var obj2 = document.getElementById(par[1]).childNodes.item(1).childNodes.item(1).attributes.item(1).nodeValue;
 	var erroCard = document.getElementById("erroCard");
-	console.log(erroCard);
 	var acertoCard = document.getElementById("acertoCard");
 	
 	
