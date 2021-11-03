@@ -29,9 +29,10 @@ function startTimer(duration, display){
 var count = 0;
 var par = [];
 
+
 window.onload = function(){
 
-	var duration = 60 * 0.10; //conversao para segundos
+	var duration = 60 * 4; //conversao para segundos
 
 	var display = document.querySelector("#timer"); //Elemento para exibir o timer
 
@@ -268,25 +269,34 @@ function acertouPar() {
 	
 	var obj1 = document.getElementById(par[0]).childNodes.item(1).childNodes.item(1).attributes.item(1).nodeValue;
 	var obj2 = document.getElementById(par[1]).childNodes.item(1).childNodes.item(1).attributes.item(1).nodeValue;
+	var erroCard = document.getElementById("erroCard");
+	console.log(erroCard);
+	var acertoCard = document.getElementById("acertoCard");
 	
 	
 	if (obj1 !== obj2) {
-		
+				
 		setTimeout(function() {
 			document.getElementById(par[0]).classList.remove("flip");
 			document.getElementById(par[1]).classList.remove("flip");
+			erroCard.play();
+						
 		}, 1000);	
 		
 	} else {
 		console.log("Acertou o par!");
+		acertoCard.play();
 	}
 }
 
 function venceu() {
 	
 	count = document.querySelectorAll(".flip");
-	if (count.length === 6) {
+	setTimeout(function() {
+		if (count.length === 6) {
 		window.location.href = "TelaVenceu.html";
 	}
+		
+	}, 1000);
 }
 
