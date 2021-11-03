@@ -101,6 +101,26 @@ div {
 	text-decoration: none;
 }
 
+   @-webkit-keyframes blinker {
+            0% { opacity: 0; } 
+            30% { opacity: 0.3; color:#FFD66C; } 
+            40% { opacity: 0.4; color:#FFD66C; } 
+            55% { opacity: 0.5; color:#FFD66C;}  
+            70% { opacity: 0.7; color:#FFD66C} 
+            80% { opacity: 0.8; color:#FFD66C;} 
+            95% { opacity: 0.9; color:#FFD66C;}
+            100% { opacity: 1; color:#FFD66C;}
+        }
+        @keyframes blinker {
+           0% { opacity: 0; } 
+            30% { opacity: 0.3; color:#FFD66C; } 
+            40% { opacity: 0.4; color:#FFD66C; } 
+            55% { opacity: 0.5; color:#FFD66C;}  
+            70% { opacity: 0.7; color:#FFD66C} 
+            80% { opacity: 0.8; color:#FFD66C;} 
+            95% { opacity: 0.9; color:#FFD66C;}
+            100% { opacity: 1; color:#FFD66C;}
+        }
 
 <!-- efeito transição de tela -->
 
