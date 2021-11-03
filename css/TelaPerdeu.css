@@ -45,7 +45,8 @@ div {
 	font-size: 130px;
 	margin-left: auto;
 	margin-right: auto;
-	text-shadow: -20px -1px #000;	
+	text-shadow: -20px -1px #000;
+	-webkit-animation: blinker linear 1.9s infinite;
 }
 
 .tittle-menu {

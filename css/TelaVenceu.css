@@ -29,6 +29,7 @@ a {
 	margin: 10px;
 	font-family: LuckiestGuy-Regular;
 	text-decoration: unset;
+	outline: none;
 }
 
 div {
@@ -46,6 +47,8 @@ div {
 	margin-left: auto;
 	margin-right: auto;
 	text-shadow: -20px -1px #000;	
+	-webkit-animation: blinker linear 1.9s infinite;
+           
 }
 
 .tittle-menu {
