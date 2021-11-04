@@ -64,7 +64,7 @@ div {
 
 div.panel{
 	display: grid;
-	grid-template: 1fr 1fr 1fr /1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template: 1fr 1fr 1fr 1fr /1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 10px;
 	background: #FFD76F;
 	-webkit-border-radius: 20px;
@@ -79,8 +79,8 @@ div.panel{
 	cursor: pointer;
 	text-align: center;
 	border: yellow solid;
-	margin: 200px 150px 60px 20px;
-    padding: 3px 60px 112px 1px;	
+    padding: 10px;
+    margin-top: 160px;
 }
 
 /* card style */
@@ -92,9 +92,14 @@ div.panel{
 	position:relative;
 	transform-style: preserve-3d;
 	transition: transform .5s; /*trasition effect*/
-	margin: 80px 20px -20px 100px;
+	margin: 23px;
 }
 
+.card:focus {
+	outline: none;
+	box-shadow: 10px 10px 50px  rgba(245, 45, 45);
+	border-radius: 20px;
+}
 
 .card_back, .card_front{
 	width: 100%;
