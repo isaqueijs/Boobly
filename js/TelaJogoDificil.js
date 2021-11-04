@@ -1,3 +1,121 @@
+var count = 0;
+var par = [];
+var id = 1;
+
+var array1 = [1, 2, 3, 4, 5, 6, 7, 8];
+var array2 = [9, 10, 11, 12, 13, 14, 15, 16];
+var array3 = [17, 18, 19, 20, 21, 22, 23, 24];
+var array4 = [25, 26, 27, 28, 29, 30, 31, 32];
+
+window.onload = function(){
+	var duration = 60 * 10; //conversao para segundos
+	var display = document.querySelector("#timer"); //Elemento para exibir o timer
+	
+	startTimer(duration, display); //inicia a função
+	
+	for (var int = 1; int <= 32; int++) {
+		document.getElementById(int).addEventListener('click', flipCard)
+	}
+	
+	var obj = document.getElementById("1");
+	obj.focus();
+	
+	// add eventListener for keydown
+	document.addEventListener('keydown', function(e) {
+		switch (e.keyCode) {
+		case 37: // LEFT arrow
+			 if (array1.includes(id)) {
+				id = (array1.indexOf(id) === 0) ? array1[array1.length - 1] : id - 1;
+				document.getElementById(id).focus();
+			} else if (array2.includes(id)) {
+				id = (array2.indexOf(id) === 0) ? array2[array2.length - 1] : id - 1;
+				document.getElementById(id).focus();
+			} else if (array3.includes(id)) {
+				id = (array3.indexOf(id) === 0) ? array3[array3.length - 1] : id - 1;
+				document.getElementById(id).focus();
+			} else if (array4.includes(id)) {
+				id = (array4.indexOf(id) === 0) ? array4[array4.length - 1] : id - 1;
+				document.getElementById(id).focus();
+			}
+			break;
+		case 38: // UP arrow
+			if (array1.includes(id)) {
+				id = array4[array1.indexOf(id)];
+				document.getElementById(id).focus();
+			} else if (array2.includes(id)) {
+				id = array1[array2.indexOf(id)];
+				document.getElementById(id).focus();
+			} else if (array3.includes(id)) {
+				id = array2[array3.indexOf(id)];
+				document.getElementById(id).focus();
+			} else if (array4.includes(id)) {
+				id = array3[array4.indexOf(id)];
+				document.getElementById(id).focus();
+			}
+			break;
+		case 39: // RIGHT arrow
+			if (array1.includes(id)) {
+				id = (array1.indexOf(id) === array1.length - 1) ? array1[0] : id + 1;
+				document.getElementById(id).focus();
+			} else if (array2.includes(id)) {
+				id = (array2.indexOf(id) === array2.length - 1) ? array2[0] : id + 1;
+				document.getElementById(id).focus();
+			} else if (array3.includes(id)) {
+				id = (array3.indexOf(id) === array3.length - 1) ? array3[0] : id + 1;
+				document.getElementById(id).focus();
+			} else if (array4.includes(id)) {
+				id = (array4.indexOf(id) === array4.length - 1) ? array4[0] : id + 1;
+				document.getElementById(id).focus();
+			}
+			break;
+		case 40:
+			if (array4.includes(id)) {
+				id = array1[array4.indexOf(id)];
+				document.getElementById(id).focus();
+			} else if (array1.includes(id)) {
+				id = array2[array1.indexOf(id)];
+				document.getElementById(id).focus();
+			} else if (array2.includes(id)) {
+				id = array3[array2.indexOf(id)];
+				document.getElementById(id).focus();
+			} else if (array3.includes(id)) {
+				id = array4[array3.indexOf(id)];
+				document.getElementById(id).focus();
+			}  
+			// DOWN arrow
+			break;
+		case 13:
+			if (isFaceUp(id)) {				
+				// OK button
+				break;
+			} else {
+				document.activeElement.click();
+			}
+
+			if (par.length === 2) {
+				par = [];
+			}
+
+			if (par[par.length - 1] !== id) {
+				par.push(id);
+
+				if (par.length === 2) {
+					acertouPar();
+					venceu();
+				}
+			}
+
+			break;
+		case 10009: // RETURN button
+
+			break;
+		default:
+			console.log('Key code : ' + e.keyCode);
+		break;
+		}
+	});
+}
+
 /* GAME TIMER */
 
 function startTimer(duration, display){
@@ -27,147 +145,42 @@ function startTimer(duration, display){
 }
 
 
-window.onload = function(){
-	var duration = 60 * 0.10; //conversao para segundos
-	var display = document.querySelector("#timer"); //Elemento para exibir o timer
-	
-	startTimer(duration, display); //inicia a função
-}
-
-
-
-/*
-
-
-const FRONT = "card_front"
-const BACK = "card_back"
-const CARD = "card"
-const ICON = "icon"
-	
-	
-let techs =  ['coruja',
-              'dog',
-              'elefante',
-              'foca',
-              'gato',
-              'grilo',
-              'jacare',
-              'macaco',
-              'panda',
-              'tigre',
-              'veado',
-              'polvo',
-              'urso',
-              'joaninha',
-              'siri',
-              'sapo',
-              'galinha'];
-
-let cards = null; //global 
-startGame(); //iniciando
-
-
-function startGame(){
-	cards = createCardsFromTechs(techs); //criando os cards
-	shuffleCards(cards); //embaralha cards
-	initializeCards(cards);
-}
-
-function initializeCards(cards){
-	let gameBoard = document.getElementById("gameBoard");
-	
-	//criando cartas
-	cards.forEach(card => {
-		let cardElement = document.createElement('div');
-		cardElement.id = card.id;  //add id para os cards
-		cardElement.classList.add(CARD);
-		cardElement.dataset.icon = card.icon; //VERIFICAR SE CARDS SAO IGUAIS
-		createCardContent(card, cardElement);
-		
-		cardElement.addEventListener('click', flipCard); // chamando função flipCard evento do click
-		gameBoard.appendChild(cardElement);	// colocando no tabuleiro
-		
-	})
-}
-
-
-function createCardContent(card, cardElement){	
-	createCardFace(FRONT, card, cardElement);
-	createCardFace(BACK, card, cardElement);	
-}
-
-
-
-function createCardFace(face, card, element){
-	
-	let cardElementFace = document.createElement('div');
-	cardElementFace.classList.add(face);
-	
-	if(face === FRONT){
-		let iconElement =  document.createElement('img');
-		iconElement.classList.add(ICON);
-		iconElement.src = "../images/cards"+ card.icon + ".png";
-		cardElementFace.appendChild(iconElement);
-		
-	}else{
-		cardElementFace.innerHtml = "&lt/&gt";
-	}
-	
-	element.appendChild(cardElementFace);
-	
-}
-
-
-function shuffleCards(cards) {
-	let currentIndex = cards.lenght; //index atual do card
-	let randomIndex = 0; //index 0
-	
-	while(currentIndex !== 0){
-		
-		randomIndex = Math.floor(Math.random() * currentIndex); //so pode pegar cartas que nao foi embaralhada de 1 até fim 
-		currentIndex--; // diminue os cards
-		
-		[cards[randomIndex], cards[currentIndex]] = [ cards[currentIndex], cards[randomIndex]]
-	}
-}
-
-
-
- function createCardsFromTechs(techs){
-	let cards = [];
-	
-	techs.forEach((tech) => {
-		cards.push(createPairFromTech(tech));
-	})
-	
-	return cards.flatMap(pair => pair);
-	
-}
-
-
-
-function createPairFromTech(tech) {
-	return [{
-		id: createIdWithTech(tech),
-		icon: tech,
-		flipped: false,
-	}, {
-		id: createIdWithTech(tech),
-		icon: tech,
-		flipped: false,
-	}]
-}
-
-
-//criando o ID dos cards
-function createIdWithTech(tech) {
-	return tech + parseInt( Math.random() * 1000); //Math... numero randomico
-}
-
 function flipCard() {
 	this.classList.add("flip");
 	
 }
 
-*/
+function isFaceUp(id) {
+	return document.getElementById(id).classList.contains("flip");
+}
 
+function acertouPar() {
+	
+	var obj1 = document.getElementById(par[0]).childNodes.item(1).childNodes.item(1).attributes.item(1).nodeValue;
+	var obj2 = document.getElementById(par[1]).childNodes.item(1).childNodes.item(1).attributes.item(1).nodeValue;
+	var erroCard = document.getElementById("erroCard");
+	var acertoCard = document.getElementById("acertoCard");
+	
+	if (obj1 !== obj2) {
+		
+		setTimeout(function() {
+			document.getElementById(par[0]).classList.remove("flip");
+			document.getElementById(par[1]).classList.remove("flip");
+			erroCard.play();
+		}, 1000);	
+		
+	} else {
+		console.log("Acertou o par!");
+		acertoCard.play();
+	}
+}
+
+function venceu() {
+	
+	count = document.querySelectorAll(".flip");
+	setTimeout(function() {
+		if (count.length === 32) {
+			window.location.href = "TelaVenceu.html";
+		}
+	}, 1500)
+}
