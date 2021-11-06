@@ -22,7 +22,7 @@
 
 window.onload = function() {
 
-	document.getElementById("button").focus();
+	document.getElementById("inputName").focus();
 
 	// add eventListener for keydown
 	document.addEventListener('keydown', function(e) {
@@ -30,32 +30,30 @@ window.onload = function() {
 		case 37: // LEFT arrow
 			break;
 		case 38:
-			if (document.activeElement === document.getElementById("3")) {
-				document.getElementById("2").focus()
+			if (document.activeElement === document.getElementById("inputName")) {
+				document.getElementById("button").focus()
 			} else if (document.activeElement === document
-					.getElementById("2")) {
-				document.getElementById("1").focus()
-			} else if (document.activeElement === document
-					.getElementById("1")) {
-				document.getElementById("3").focus()
+					.getElementById("button")) {
+				document.getElementById("inputName").focus()
 			} else {
-				document.getElementById("1").focus()
-			} // UP arrow
+				document.getElementById("button").focus()
+			}// UP arrow
 			break;
 		case 39: // RIGHT arrow
 			break;
 		case 40:
-			if (document.activeElement === document.getElementById("1")) {
-				document.getElementById("2").focus()
+			if (document.activeElement === document.getElementById("inputName")) {
+				document.getElementById("button").focus()
 			} else if (document.activeElement === document
-					.getElementById("2")) {
-				document.getElementById("3").focus()
+					.getElementById("button")) {
+				document.getElementById("inputName").focus()
 			} else {
-				document.getElementById("1").focus()
+				document.getElementById("button").focus()
 			}// DOWN arrow
 			break;
 		case 13:
-			window.location.href = "TelaNivel.html"; // OK button
+//			window.location.href = "TelaNivel.html"; // OK button
+			document.activeElement.click();
 			break;
 		case 10009: // RETURN button
 			window.location.href = "TelaMenuPrincipal.html";

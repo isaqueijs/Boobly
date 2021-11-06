@@ -7,7 +7,7 @@ var array2 = [5, 6, 7, 8];
 var array3 = [9, 10, 11, 12];
 
 window.onload = function(){
-	var duration = 60 * 10; //conversao para segundos
+	var duration = 60 * 8; //conversao para segundos
 	var display = document.querySelector("#timer"); //Elemento para exibir o timer
 	
 	startTimer(duration, display); //inicia a função

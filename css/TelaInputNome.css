@@ -30,13 +30,13 @@ a {
 	text-shadow: -10px -2px 6px #000000;
 }
 
-input{
+input {
 	display: flex;
 	margin: 10px;
 	font-family: LuckiestGuy-Regular;
 }
 
-button{
+button {
 	display: flex;
 	margin: 10px;
 	font-family: LuckiestGuy-Regular;
@@ -51,12 +51,12 @@ div {
 	margin-right: auto;
 }
 
-p{
+p {
 	font-family: LuckiestGuy-Regular;
 	text-shadow: -10px -2px 6px #000000;
 }
 
-.BUTTON_OPP  {
+.BUTTON_OPP {
 	background: #6372FF;
 	background-image: -webkit-linear-gradient(top, #3D94F6, #1E62D0);
 	background-image: -moz-linear-gradient(top, #3D94F6, #1E62D0);
@@ -141,23 +141,41 @@ p{
 	margin-top: 3%;
 }
 
-.BUTTON_OPP:hover {
-	border: solid #337FED 1px;
-	background: #1E62D0;
-	background-image: -webkit-linear-gradient(top, #1E62D0, #3D94F6);
-	background-image: -moz-linear-gradient(top, #1E62D0, #3D94F6);
-	background-image: -ms-linear-gradient(top, #1E62D0, #3D94F6);
-	background-image: -o-linear-gradient(top, #1E62D0, #3D94F6);
-	background-image: -webkit-gradient(to bottom, #1E62D0, #3D94F6);
+.BUTTON_OPP3:focus {
+	outline: none;
+	background: #3AC0A8;
+	background-image: -moz-linear-gradient(top, #3D94F6, #1E62D0);
+	background-image: -ms-linear-gradient(top, #3D94F6, #1E62D0);
+	background-image: -o-linear-gradient(top, #3D94F6, #1E62D0);
+	background-image: -webkit-gradient(to bottom, #3D94F6, #1E62D0);
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 48px;
+	height: 103px;
+	line-height: 62px;
+	color: #FFFFFF;
+	width: 190px;
+	font-size: 61px;
+	font-weight: 100;
+	padding: 20px;
+	-webkit-box-shadow: 1px 1px 20px 0 #000000;
+	-moz-box-shadow: 1px 1px 20px 0 #000000;
+	box-shadow: 1px 1px 20px 0 #000000;
+	border: solid #337FED 1px;
 	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	border: solid #00f9ff 10px;
+	margin-top: 3%;
 }
-
-
-<!-- efeito transição de tela -->
-
-
-
-
+<!--
+efeito
+ 
+transição
+ 
+de
+ 
+tela
+ 
+-->
