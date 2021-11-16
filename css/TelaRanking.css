@@ -57,7 +57,7 @@ div.panel{
 	height: 600px;
 	line-height: 100px;
 	color: #FF4D00;
-	width: 1200px;
+	width: 480px;
 	font-size: 55px;
 	font-weight: 50px;
 	border: solid #337FED 1px;
@@ -66,7 +66,7 @@ div.panel{
 	cursor: pointer;
 	text-align: center;
 	border: yellow solid;
-	margin: 150px 0px 100px 350px ;
+	margin: 150px 0px 100px 70px ;
 	padding: 5px 25px 25px 25px;	
 }
 
@@ -77,7 +77,7 @@ div.panel{
 	font-family:  LuckiestGuy-Regular;
 	background: #fff;
 	height: 20px;
-	width: 1200px;
+	width: 480px;
 	border-radius: 45px;
 	box-shadow: 1px 1px 20px 0 grey;
 	cursor: pointer;
@@ -91,7 +91,7 @@ div.panel{
 	font-family:  LuckiestGuy-Regular;
 	background: #945AC5;
 	height: 20px;
-	width: 1200px;
+	width: 480px;
 	border-radius: 45px;
 	box-shadow: 1px 1px 20px 0 grey;
 	cursor: pointer;
@@ -131,7 +131,8 @@ div.panel{
 }	
 	
 .Column1{
-	text-align:right;
+	font-size: 40px;
+	text-align:center;
 	border-radius: 45px;
 	background: #fff;	
 	width: 25px;
@@ -146,7 +147,7 @@ div.panel{
 	width: 70px;
 	font-family: LuckiestGuy-Regular;
 	color: #fff;
-	font-size: 80px;
+	font-size: 60px;
 	border-radius: 45px;
 	margin-right: 20px;
 	text-shadow: -10px 2px #000;
