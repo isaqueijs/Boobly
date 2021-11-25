@@ -97,7 +97,7 @@ div.panel{
 
 .card:focus {
 	outline: none;
-	box-shadow: 10px 10px 50px  rgba(245, 45, 45);
+	box-shadow: 0px 0px 2em #DC143C, 0px 0px 2em #DC143C, 0px 0px 2em #DC143C ;
 	border-radius: 20px;
 }
 
