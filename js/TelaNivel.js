@@ -13,8 +13,13 @@
  *      See the License for the specific language governing permissions and
  *      limitations under the License.
  */
+function setarNivel(nivel){
+	window.localStorage.setItem('nivelUsuario', nivel);
+}
 
 window.onload = function() {
+
+	
 	var somBotao = document.getElementById("somBotao");
 	
 	document.getElementById("1").focus();

@@ -1,8 +1,13 @@
 var count = 0;
 var par = [];
+var timerGlobal = 0;
+var durationGlobal = 0;
 
 
 window.onload = function(){
+	
+	console.log(window.localStorage.getItem('nomeUsuario'))
+	console.log(window.localStorage.getItem('nivelUsuario'))
 
 	var duration = 60 * 4; //conversao para segundos
 
@@ -106,29 +111,36 @@ window.onload = function(){
 
 }
 
+function getTime(time){
+	var minutes = parseInt(time / 60, 10);
+	var seconds = parseInt(time % 60, 10);
+
+	minutes = minutes < 10 ? "0" + minutes: minutes;
+	seconds = seconds < 10 ? "0" + seconds: seconds;
+
+	return minutes + ":" + seconds;
+}
+
 /* GAME TIMER */
 
 function startTimer(duration, display){
 	var timer = duration, minutes, seconds;
+	durationGlobal = duration;
 
 	setInterval(function () {
-
-		minutes = parseInt(timer / 60, 10);
-		seconds = parseInt(timer % 60, 10);
-
-		minutes = minutes < 10 ? "0" + minutes: minutes;
-		seconds = seconds < 10 ? "0" + seconds: seconds;
-
-		display.textContent = minutes + ":" + seconds;
-
+		
+		display.textContent = getTime(timer);
 
 		if(timer == 0){
 			window.location.href = "TelaPerdeu.html";
 		}
 
 		if(--timer < 0){
+			
 			timer = duration;
 		}
+		
+		timerGlobal = timer;
 
 
 	}, 1000);
@@ -167,6 +179,9 @@ function acertouPar() {
 }
 
 function venceu() {
+	console.log(getTime(durationGlobal - timerGlobal));
+	window.localStorage.setItem('tempoUser', getTime(durationGlobal - timerGlobal));
+
 
 	count = document.querySelectorAll(".flip");
 	setTimeout(function() {

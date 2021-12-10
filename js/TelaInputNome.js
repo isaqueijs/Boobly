@@ -15,12 +15,17 @@
  */
 
 
-
+function gravarNome(){
+	window.localStorage.setItem('nomeUsuario', document.getElementById("inputName").value);
+	//console.log(window.localStorage.getItem('nomeUsuario'))
+}
 
 
 
 
 window.onload = function() {
+	
+	
 
 	document.getElementById("inputName").focus();
 
