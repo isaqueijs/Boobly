@@ -14,3 +14,5 @@
 <h4 align="center" >Repositório para a disciplina de Desenvolvimento de Aplicações para TV - 2020.2 - UFRPE</h4>
 <h4 align="center" >Boobly Memory Card</h4>
 
+![MacBook - 2](https://user-images.githubusercontent.com/18706961/158619335-442f080f-2fd4-4f59-93f5-6ce394742dec.png)
+![MacBook - 11](https://user-images.githubusercontent.com/18706961/158619372-0bd15f14-b6ed-4651-947e-fcf287eef8d6.png)
