@@ -1,0 +1,186 @@
+* {
+	margin: 0;
+	padding: 0;
+	background: #fff
+}
+
+html {
+	height: 100%;
+}
+
+@font-face {
+	font-family: LuckiestGuy-Regular;
+	src: url("../fonts/LuckiestGuy-Regular.ttf");
+}
+
+body {
+	align-items: center;
+	height: 100%;
+	display: flex;
+	background-image: url("../images/fundoTelaRanking.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+a{
+	text-decoration: none;
+	position: absolute;
+}
+
+div {
+	display: flex;
+	flex-direction: column;
+	background: #7F3DB6;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15%;
+}
+
+.cabecalho{
+	font-family:  LuckiestGuy-Regular;
+	background-color: #7F3DB6;
+	color: #fff;
+	font-size: 150px;
+	position: absolute;	
+	margin: -400px 0px -50px 700px;
+	text-shadow: -20px -1px #000;	
+}
+
+div.panel{
+	opacity: 0.9;
+	background: #945AC5;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 48px;
+	height: 600px;
+	line-height: 100px;
+	color: #FF4D00;
+	width: 480px;
+	font-size: 55px;
+	font-weight: 50px;
+	border: solid #337FED 1px;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	border: yellow solid;
+	margin: 150px 0px 100px 70px ;
+	padding: 5px 25px 25px 25px;	
+}
+
+/* table settings */
+
+.tableSettings{
+	
+	font-family:  LuckiestGuy-Regular;
+	background: #fff;
+	height: 20px;
+	width: 480px;
+	border-radius: 45px;
+	box-shadow: 1px 1px 20px 0 grey;
+	cursor: pointer;
+	text-align: center;
+	margin: 10px 3px 10px 3px;
+	padding: -100px 0px -200px 0px;
+}
+
+.tableTitle{
+	border: solid 5px #945AC5;
+	font-family:  LuckiestGuy-Regular;
+	background: #945AC5;
+	height: 20px;
+	width: 480px;
+	border-radius: 45px;
+	box-shadow: 1px 1px 20px 0 grey;
+	cursor: pointer;
+	text-align: center;
+	margin: 20px 3px 20px 3px;
+	padding: -100px 0px -200px 0px;
+}
+
+/*table column settings*/
+
+.Column4{
+	border-radius: 45px;
+	background: #fff;	
+	margin: 25px 0px 10px 0px;
+	width: 50px;
+	text-align: left;
+	text-shadow: -3px 1px #BC3C05;
+}
+
+.Column3{
+	text-align:right;
+	border-radius: 45px;
+	background: #fff;	
+	margin: 25px 0px 10px 0px;
+	width: 50px;
+	text-shadow: -3px 1px #BC3C05;
+}
+
+.Column2{
+	text-align:center;
+	border-radius: 45px;
+	background: #fff;	
+	margin: 25px 0px 10px 0px;
+	width: 100px;
+	text-shadow: -3px 1px #BC3C05;
+	
+}	
+	
+.Column1{
+	font-size: 40px;
+	text-align:center;
+	border-radius: 45px;
+	background: #fff;	
+	width: 25px;
+	padding-top: -50px;
+	padding-bottom: -50px;
+	text-shadow: -3px 1px #BC3C05;
+}	
+
+/* table title settings */
+.playerColumn{
+	background: #FF7B52;
+	width: 70px;
+	font-family: LuckiestGuy-Regular;
+	color: #fff;
+	font-size: 60px;
+	border-radius: 45px;
+	margin-right: 20px;
+	text-shadow: -10px 2px #000;
+}
+
+.dotsColumn{
+	background: #FF7B52;
+	width: 70px;
+	font-family: LuckiestGuy-Regular;
+	color: #fff;
+	font-size: 80px;
+	border-radius: 45px;
+	margin-left: 20px;
+	text-shadow: -10px 2px #000;
+}
+
+/*"back" button settings and name "back"*/
+
+#voltarTextField{
+	font-family:  LuckiestGuy-Regular;
+	background-color: #FF7B52;
+	color: #fff;
+	font-size: 70px;
+	position: absolute;
+	margin: 480px 0px 0px 835px;
+	text-shadow: -15px -2px #000;	
+} 
+
+#ButtonVoltar{
+	position: absolute;
+	background: #FF7B52 ;
+	width: 90px;
+	height: 70px;
+	text-shadow: 10px 20px #000;
+	margin: 370px 0px 0px 885px;
+}

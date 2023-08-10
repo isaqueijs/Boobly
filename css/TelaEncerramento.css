@@ -1,0 +1,51 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+}
+
+@font-face {
+	font-family: LuckiestGuy-Regular;
+	src: url("../fonts/LuckiestGuy-Regular.ttf");
+}
+
+body {
+	align-items: center;
+	height: 100%;
+	display: flex;
+	background-image: url("../images/fundoEncerramento.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.cabecalho{
+	font-family:  LuckiestGuy-Regular;
+	background-color: #000;
+	color: #6372FF;
+	font-size: 150px;
+	position: absolute;	
+	margin: -140px 0px -50px 700px;
+	text-shadow: -20px -1px #fff;	
+}
+
+.cabecalho2{
+	font-family:  LuckiestGuy-Regular;
+	background-color: #000;
+	color: #fff;
+	font-size: 45px;
+	position: absolute;	
+	margin-left: 39%;
+	margin-top: 10%;
+	text-shadow: -20px -1px #000;	
+}
+
+.animation{
+	margin-left: 1905%;
+    margin-top: 321%;
+}
+	
